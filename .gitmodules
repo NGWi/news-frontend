@@ -1,0 +1,3 @@
+[submodule "example-news-api-bridge"]
+	path = example-news-api-bridge
+	url = ./example-news-api-bridge
