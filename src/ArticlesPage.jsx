@@ -22,13 +22,23 @@ export function ArticlesPage() {
 
 
   return (
-    <main>
-      <div>
-        Live Search:
-        <input value={searchTerms} onChange={(e) => setSearchTerms(e.target.value)} type="text" />
-        <button onClick={handleIndex}>Search</button>
+    <div className="container mx-auto p-4 mt-4 pl-4 pr-4">
+      <div className="flex justify-center mb-4">
+        <input
+          type="text"
+          value={searchTerms}
+          onChange={(e) => setSearchTerms(e.target.value)}
+          className="w-full p-2 pl-10 text-sm text-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-600"
+          placeholder="Search articles"
+        />
+        <button
+          onClick={handleIndex}
+          className="ml-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg"
+        >
+          Search
+        </button>
       </div>
         <ArticlesIndex articles={articles} />
-    </main>
+    </div>
   );
 }
